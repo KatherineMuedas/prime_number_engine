@@ -8,6 +8,11 @@ class PrimeNumberEngine
   end
 
   def cross_out_multiple_of_two
-    number_list.reject { |n| n % 2 == 0 if n != 2}
+    number_list.reject { |n| n % 2 == 0 unless n == 2}
+  end
+
+  def cross_out_multiple_of_three
+    list = cross_out_multiple_of_two
+    list.reject { |n| n % 3 == 0 unless n == 3 }
   end
 end
