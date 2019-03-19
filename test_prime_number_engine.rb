@@ -23,5 +23,12 @@ describe PrimeNumberEngine do
     expected = [2,3,5,7,11,13,17,19,23,29]
     assert_equal expected, result
   end
+
+  it 'should calculate the prime numbers for 30' do
+    pn = PrimeNumberEngine.new(30)
+    result = pn.calculate
+    expected = [2,3,5,7,11,13,17,19,23,29]
+    assert_equal expected, result
+  end
 end
 
