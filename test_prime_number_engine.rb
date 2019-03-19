@@ -8,5 +8,12 @@ describe PrimeNumberEngine do
     expected = (2..30).to_a
     assert_equal expected, result
   end
+
+  it 'should cross out multiples of 2' do
+    pn = PrimeNumberEngine.new(30)
+    result = pn.cross_out_multiple_of_two
+    expected = [2,3,5,7,9,11,13,15,17,19,21,23,25,27,29]
+    assert_equal expected, result
+  end
 end
 
