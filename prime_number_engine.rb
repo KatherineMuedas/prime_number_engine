@@ -1,7 +1,11 @@
 class PrimeNumberEngine
   def initialize(limit)
     @limit = limit
-    @list = (2..@limit).to_a
+    @list = number_list
+  end
+
+  def number_list
+    (2..@limit).to_a
   end
 
   def calculate
