@@ -22,5 +22,12 @@ describe PrimeNumberEngine do
     expected = [2,3,5,7,11,13,17,19,23,25,29]
     assert_equal expected, result
   end
+
+  it 'should cross out multiple of 2, 3 and 5' do
+    pn = PrimeNumberEngine.new(30)
+    result =  pn.cross_out_multiple_of_five
+    expected = [2,3,5,7,11,13,17,19,23,29]
+    assert_equal expected, result
+  end
 end
 
