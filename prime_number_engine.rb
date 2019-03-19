@@ -5,17 +5,22 @@ class PrimeNumberEngine
   end
 
   def cross_out_multiple_of_two
-    @list.reject { |n| n % 2 == 0 unless n == 2}
+    cross_out_multiples_of(2)
   end
 
   def cross_out_multiple_of_three
     @list = cross_out_multiple_of_two
-    @list.reject { |n| n % 3 == 0 unless n == 3 }
+    cross_out_multiples_of(3)
   end
 
   def cross_out_multiple_of_five
     @list = cross_out_multiple_of_three
-    @list.reject { |n| n % 5 == 0 unless n == 5 }
+    cross_out_multiples_of(5)
   end
 
+  private
+
+  def cross_out_multiples_of(number)
+    @list.reject {|n| n % number == 0 unless n == number}
+  end
 end
